@@ -16,3 +16,4 @@ phases:
       - docker push 294656644051.dkr.ecr.ap-southeast-1.amazonaws.com/flask-microservice:latest
 artifacts:
   files: '**/*'
+discard-paths: yes
