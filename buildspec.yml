@@ -8,12 +8,12 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t flask-microservice .
-      - docker tag flask-microservice:latest 294656644051.dkr.ecr.ap-southeast-1.amazonaws.com/flask-microservice:latest
+      - docker build -t microservice-ecr .
+      - docker tag microservice-ecr:latest 294656644051.dkr.ecr.ap-southeast-1.amazonaws.com/microservice-ecr:latest
   post_build:
     commands:
       - echo Pushing the Docker image to Amazon ECR...
-      - docker push 294656644051.dkr.ecr.ap-southeast-1.amazonaws.com/flask-microservice:latest
+      - docker push 294656644051.dkr.ecr.ap-southeast-1.amazonaws.com/microservice-ecr:latest
 artifacts:
   files: '**/*'
   discard-paths: yes
