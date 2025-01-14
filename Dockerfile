@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py .
 
 # Expose port 80 for AppRunner
-EXPOSE 80
+EXPOSE 8080
 
 # Command to run the app
 CMD ["python", "app.py"]
